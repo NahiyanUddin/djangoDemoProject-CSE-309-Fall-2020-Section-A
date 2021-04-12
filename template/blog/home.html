@@ -1,0 +1,11 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block content %}
+    <h1>Welcome to out home page.</h1>
+    <a href="{% url 'send_email' %}">Click this link to send email.</a>
+{% endblock %}

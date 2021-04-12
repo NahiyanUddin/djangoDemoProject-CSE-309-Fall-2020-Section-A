@@ -1,0 +1,26 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+    Send Email
+{% endblock %}
+
+
+{% block content %}
+    <h5>The following students have been sent an email.</h5>
+    <table>
+        <thead>
+            <td>Name</td>
+            <td>Id</td>
+            <td>Section</td>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr align="center">
+                    <td align="left">{{student.student_name}}</td>
+                    <td>{{student.student_id}}</td>
+                    <td>{{student.section}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
